@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="搞笑签名网 - 提供最新、最热门、最走心的搞笑个性签名，包含幽默短句、生活吐槽、扎心语录，适合QQ、微信、微博等社交平台个性展示。">
+    <meta name="keywords" content="搞笑签名,个性签名,幽默语录,搞笑说说,QQ签名,微信签名">
+    <title>搞笑签名 - 热门幽默个性签名与语录精选</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff4757;
+            --secondary-color: #2f3542;
+            --accent-color: #ffa502;
+            --bg-color: #f1f2f6;
+            --card-bg: #ffffff;
+            --text-main: #2f3542;
+            --text-light: #747d8c;
+            --spacing-unit: 16px;
+            --border-radius: 12px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-bottom: 40px;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 15px 0;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 24px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .search-box {
+            display: flex;
+            background: #f1f2f6;
+            border-radius: 20px;
+            padding: 5px 15px;
+        }
+
+        .search-box input {
+            border: none;
+            background: transparent;
+            outline: none;
+            padding: 5px;
+            width: 150px;
+            font-size: 0.9rem;
+        }
+
+        .search-box button {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            color: var(--text-light);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            text-align: center;
+            padding: 60px 0;
+            background: linear-gradient(135deg, #ff6b81 0%, #ff4757 100%);
+            color: white;
+            border-radius: 0 0 30px 30px;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* 分类标签 */
+        .categories {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .category-tag {
+            padding: 8px 20px;
+            background: var(--card-bg);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 1px solid transparent;
+            color: var(--text-light);
+        }
+
+        .category-tag:hover, .category-tag.active {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(255, 71, 87, 0.3);
+        }
+
+        /* 签名列表 */
+        .signature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+            margin-bottom: 50px;
+        }
+
+        .signature-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            border-left: 4px solid var(--primary-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .signature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .signature-content {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--text-main);
+            margin-bottom: 20px;
+            min-height: 60px;
+        }
+
+        .signature-content::before {
+            content: "“";
+            font-size: 3rem;
+            color: rgba(255, 71, 87, 0.1);
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            line-height: 1;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            border-top: 1px solid #f1f2f6;
+            padding-top: 15px;
+        }
+
+        .like-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #a4b0be;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: var(--transition);
+        }
+
+        .like-btn:hover, .like-btn.liked {
+            color: #ff4757;
+        }
+
+        /* 特色栏目 */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-bottom: 50px;
+        }
+
+        .feature-box {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .feature-box h3 {
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .feature-box p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* 底部 */
+        footer {
+            background: var(--secondary-color);
+            color: #dfe4ea;
+            padding: 40px 0;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a {
+            color: #dfe4ea;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero {
+                padding: 40px 0;
+            }
+
+            .search-box {
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .search-box input {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><path d="M12 18v-6"/><path d="M8 15l4 3 4-3"/></svg>
+                <span>搞笑签名</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">最新</a></li>
+                    <li><a href="#">热门</a></li>
+                    <li><a href="#">分类</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="搜索搞笑语录...">
+                <button>🔍</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>每天一个搞笑签名，治愈不开心</h1>
+                <p>精选全网最走心的幽默短句、生活吐槽与扎心语录，让你的个性签名成为朋友圈最靓的仔。</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- 分类导航 -->
+            <div class="categories">
+                <span class="category-tag active">全部</span>
+                <span class="category-tag">生活吐槽</span>
+                <span class="category-tag">职场摸鱼</span>
+                <span class="category-tag">单身狗</span>
+                <span class="category-tag">减肥励志</span>
+                <span class="category-tag">自嘲幽默</span>
+            </div>
+
+            <!-- 特色栏目 -->
+            <section class="features">
+                <div class="feature-box">
+                    <span class="feature-icon">⚡</span>
+                    <h3>每日精选</h3>
+                    <p>每天更新最热辣、最扎心的搞笑签名，紧跟网络热梗。</p>
+                </div>
+                <div class="feature-box">
+                    <span class="feature-icon">🔥</span>
+                    <h3>高赞榜单</h3>
+                    <p>统计全网点赞最多的搞笑语录，看看大家都在用什么。</p>
+                </div>
+                <div class="feature-box">
+                    <span class="feature-icon">✨</span>
+                    <h3>分类浏览</h3>
+                    <p>无论是工作、学习还是生活，总有一款适合你的心情。</p>
+                </div>
+            </section>
+
+            <!-- 签名列表 -->
+            <section class="signature-grid">
+                <article class="signature-card">
+                    <div class="signature-content">
+                        别人赖床是因为有钱，想睡多晚睡多晚；我赖床是因为没钱，能省一顿是一顿。
+                    </div>
+                    <div class="card-footer">
+                        <span>生活吐槽</span>
+                        <button class="like-btn" onclick="toggleLike(this)">
+                            <span>♥</span> 1.2k
+                        </button>
+                    </div>
+                </article>
+
+                <article class="signature-card">
+                    <div class="signature-content">
+                        我不是懒，我只是在进行低能耗的节能模式，为了在关键时刻爆发。
+                    </div>
+                    <div class="card-footer">
+                        <span>自嘲幽默</span>
+                        <button class="like-btn" onclick="toggleLike(this)">
+                            <span>♥</span> 856
+                        </button>
+                    </div>
+                </article>
+
+                <article class="signature-card">
+                    <div class="signature-content">
+                        哪怕生活有一万个让你难过的地方，也要记得给自己找乐子。
+                    </div>
+                    <div class="card-footer">
+                        <span>励志语录</span>
+                        <button class="like-btn" onclick="toggleLike(this)">
+                            <span>♥</span> 2.3k
+                        </button>
+                    </div>
+                </article>
+
+                <article class="signature-card">
+                    <div class="signature-content">
+                        间歇性踌躇满志，持续性混吃等死，这就是我真实的人生写照。
+                    </div>
+                    <div class="card-footer">
+                        <span>职场摸鱼</span>
+                        <button class="like-btn" onclick="toggleLike(this)">
+                            <span>♥</span> 3.1k
+                        </button>
+                    </div>
+                </article>
+
+                <article class="signature-card">
+                    <div class="signature-content">
+                        长得丑怎么了？我自己又看不到，恶心的是你们。
+                    </div>
+                    <div class="card-footer">
+                        <span>霸气护短</span>
+                        <button class="like-btn" onclick="toggleLike(this)">
+                            <span>♥</span> 5.6k
+                        </button>
+                    </div>
+                </article>
+
+                <article class="signature-card">
+                    <div class="signature-content">
+                        别跟我谈理想，我的理想就是不工作还有钱拿。
+                    </div>
+                    <div class="card-footer">
+                        <span>生活吐槽</span>
+                        <button class="like-btn" onclick="toggleLike(this)">
+                            <span>♥</span> 4.2k
+                        </button>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">关于我们</a>
+                <a href="#">免责声明</a>
+                <a href="#">联系合作</a>
+                <a href="#">用户协议</a>
+            </div>
+            <p>&copy; 2023 搞笑签名网. 保留所有权利.</p>
+            <p style="font-size: 0.8rem; color: #747d8c;">本站内容仅供娱乐，部分素材来源于网络，如有侵权请联系删除。</p>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的点赞交互效果
+        function toggleLike(btn) {
+            btn.classList.toggle('liked');
+            const span = btn.querySelector('span');
+            let count = parseFloat(span.innerText.replace('k', '')) || parseInt(span.innerText);
+            
+            if (btn.classList.contains('liked')) {
+                span.innerText = '♥ ' + (count + 1);
+            } else {
+                span.innerText = '♥ ' + (count - 1);
+            }
+        }
+
+        // 分类标签切换效果
+        const tags = document.querySelectorAll('.category-tag');
+        tags.forEach(tag => {
+            tag.addEventListener('click', () => {
+                tags.forEach(t => t.classList.remove('active'));
+                tag.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

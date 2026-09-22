@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黑龙江龙招港-专业港口物流与大宗商品贸易服务平台</title>
+    <meta name="description" content="黑龙江龙招港致力于打造东北地区综合性港口物流枢纽，提供煤炭、矿石、粮食等大宗商品的装卸、仓储、运输及贸易一站式服务。了解我们的港口设施、业务范围及服务优势。">
+    <meta name="keywords" content="黑龙江龙招港, 港口物流, 大宗商品贸易, 煤炭运输, 矿石装卸, 仓储服务, 东北港口">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #004d40; /* 深青色，代表港口与稳重 */
+            --secondary-color: #00796b; /* 亮青色，代表活力与航运 */
+            --accent-color: #ff6f00; /* 橙色，用于强调 */
+            --bg-color: #f4f6f8;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-radius: 8px;
+            --container-width: 1200px;
+            --spacing-unit: 20px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 顶部导航 */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-main);
+            font-size: 16px;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--secondary-color);
+        }
+
+        .cta-button {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 10px 24px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .cta-button:hover {
+            background-color: var(--secondary-color);
+            color: #fff;
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 18px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item h3 {
+            font-size: 32px;
+            color: var(--accent-color);
+        }
+
+        .stat-item p {
+            font-size: 14px;
+            opacity: 0.8;
+            margin: 0;
+        }
+
+        /* 核心业务板块 */
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 28px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-top-color: var(--secondary-color);
+        }
+
+        .card-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .card-link {
+            color: var(--secondary-color);
+            font-weight: 600;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .card-link::after {
+            content: '→';
+            margin-left: 5px;
+            transition: margin-left 0.3s;
+        }
+
+        .card-link:hover::after {
+            margin-left: 10px;
+        }
+
+        /* 特色展示区 */
+        .feature-section {
+            background-color: #fff;
+        }
+
+        .feature-container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .feature-image {
+            flex: 1;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .feature-content {
+            flex: 1;
+        }
+
+        .feature-list {
+            margin-top: 30px;
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .feature-icon-box {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(0, 77, 64, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            flex-shrink: 0;
+        }
+
+        /* 数据展示 */
+        .data-section {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 60px 0;
+        }
+
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            text-align: center;
+            gap: 20px;
+        }
+
+        .data-item h3 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: var(--accent-color);
+        }
+
+        .data-item p {
+            opacity: 0.8;
+            font-size: 15px;
+        }
+
+        /* 合作伙伴 */
+        .partners-section {
+            padding: 40px 0;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        .partners-title {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .partners-grid {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+            opacity: 0.6;
+        }
+
+        .partner-logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #999;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #1a1a1a;
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h4 {
+            color: #fff;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .footer-col h5 {
+            color: #fff;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .copyright {
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #777;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 992px) {
+            .grid-4 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .feature-container {
+                flex-direction: column;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* 移动端简化：隐藏菜单 */
+            }
+            .hero h1 {
+                font-size: 28px;
+            }
+            .grid-4 {
+                grid-template-columns: 1fr;
+            }
+            .data-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 顶部导航 -->
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 20h20"></path>
+                    <path d="M5 20V10l4-6h6l4 6v10"></path>
+                    <path d="M10 10h4"></path>
+                    <path d="M12 20v-6"></path>
+                    <path d="M16 20v-4"></path>
+                    <path d="M8 20v-4"></path>
+                </svg>
+                黑龙江龙招港
+            </a>
+            <nav class="nav-links">
+                <a href="#" class="active">首页</a>
+                <a href="#services">港口业务</a>
+                <a href="#about">关于我们</a>
+                <a href="#trade">大宗贸易</a>
+                <a href="#contact">联系我们</a>
+            </nav>
+            <a href="#contact" class="cta-button">在线咨询</a>
+        </div>
+    </header>
+
+    <!-- 首屏 Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>东北腹地出海口<br>高效物流与大宗贸易枢纽</h1>
+            <p>黑龙江龙招港依托得天独厚的区位优势，连接中俄贸易前沿，提供专业化、智能化的港口装卸与供应链管理服务。</p>
+            <div style="margin-bottom: 30px;">
+                <a href="#services" class="cta-button" style="background-color: #fff; color: var(--primary-color);">探索服务</a>
+                <a href="#contact" style="color: #fff; margin-left: 20px; text-decoration: underline;">获取报价</a>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <h3>500万+</h3>
+                    <p>年吞吐量 (万吨)</p>
+                </div>
+                <div class="stat-item">
+                    <h3>24h</h3>
+                    <p>全天候作业</p>
+                </div>
+                <div class="stat-item">
+                    <h3>50+</h3>
+                    <p>合作伙伴航线</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心业务 -->
+    <section id="services" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>核心港口业务</h2>
+                <p>全方位满足煤炭、矿石、粮食等大宗物资的物流需求</p>
+            </div>
+            
+            <div class="grid-4">
+                <article class="card">
+                    <div class="card-icon">⚓</div>
+                    <h3>散货装卸</h3>
+                    <p>配备大型岸桥与堆场设备，专业处理煤炭、铁矿石等散装货物，确保作业效率与安全。</p>
+                    <a href="#" class="card-link">了解详情</a>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">🚢</div>
+                    <h3>集装箱运输</h3>
+                    <p>连接内陆腹地与远洋航线，提供集装箱吞吐、拆箱拼箱及多式联运解决方案。</p>
+                    <a href="#" class="card-link">了解详情</a>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">🏭</div>
+                    <h3>仓储管理</h3>
+                    <p>标准化立体仓库，提供保税仓储、普通仓储及货损理赔服务，保障货物品质。</p>
+                    <a href="#" class="card-link">了解详情</a>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">🚛</div>
+                    <h3>陆运配送</h3>
+                    <p>自有车队与第三方物流整合，提供港口到厂区、港口到码头的门到门物流服务。</p>
+                    <a href="#" class="card-link">了解详情</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 特色优势 -->
+    <section class="section feature-section">
+        <div class="container feature-container">
+            <div class="feature-image">
+                <!-- 使用 Picsum 生成港口相关随机图 -->
+                <img src="https://picsum.photos/seed/port_harbor_01/600/400" alt="黑龙江龙招港现代化港口作业场景">
+            </div>
+            <div class="feature-content">
+                <h2>为什么选择黑龙江龙招港？</h2>
+                <p>作为东北地区重要的综合性港口物流基地，我们不仅拥有先进的硬件设施，更注重服务流程的优化与客户体验的提升。</p>
+                
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <div class="feature-icon-box">1</div>
+                        <div>
+                            <h4>区位交通优势</h4>
+                            <p>位于中俄边境核心地带，紧邻铁路与高速公路网，是连接欧亚大陆桥的关键节点。</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon-box">2</div>
+                        <div>
+                            <h4>智能港口系统</h4>
+                            <p>引入物联网与大数据技术，实现船舶动态监控、货物追踪及自动化调度。</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon-box">3</div>
+                        <div>
+                            <h4>专业贸易服务</h4>
+                            <p>提供进出口报关、商检、保税物流等一站式贸易增值服务，降低客户运营成本。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 数据统计 -->
+    <section class="data-section">
+        <div class="container">
+            <div class="data-grid">
+                <div class="data-item">
+                    <h3>100%</h3>
+                    <p>安全作业率</p>
+                </div>
+                <div class="data-item">
+                    <h3>24h</h3>
+                    <p>全天候值班</p>
+                </div>
+                <div class="data-item">
+                    <h3>10+</h3>
+                    <p>业务部门支持</p>
+                </div>
+                <div class="data-item">
+                    <h3>100%</h3>
+                    <p>客户满意度</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 合作伙伴 -->
+    <section class="partners-section">
+        <div class="container">
+            <p class="partners-title">值得信赖的合作伙伴</p>
+            <div class="partners-grid">
+                <span class="partner-logo">中国远洋海运</span>
+                <span class="partner-logo">中粮集团</span>
+                <span class="partner-logo">鞍钢集团</span>
+                <span class="partner-logo">神华集团</span>
+                <span class="partner-logo">哈尔滨铁路局</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h4>黑龙江龙招港</h4>
+                    <p style="opacity: 0.7; font-size: 14px; line-height: 1.8;">
+                        专注港口物流服务二十年，致力于打造东北地区最安全、高效、智能的现代化港口。我们以诚信为本，以客户为中心，共创物流新未来。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h5>快速导航</h5>
+                    <ul>
+                        <li><a href="#">港口概况</a></li>
+                        <li><a href="#">业务范围</a></li>
+                        <li><a href="#">新闻动态</a></li>
+                        <li><a href="#">招贤纳士</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>业务服务</h5>
+                    <ul>
+                        <li><a href="#">散货装卸</a></li>
+                        <li><a href="#">集装箱运输</a></li>
+                        <li><a href="#">仓储管理</a></li>
+                        <li><a href="#">多式联运</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>联系我们</h5>
+                    <ul>
+                        <li>地址：黑龙江省哈尔滨市松北区港城路88号</li>
+                        <li>电话：0451-8888 6666</li>
+                        <li>邮箱：contact@longzhaoport.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 黑龙江龙招港 版权所有 | ICP备12345678号</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

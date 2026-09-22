@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>电影原声-经典影视配乐资源与鉴赏指南</title>
+    <meta name="description" content="本站提供海量电影原声、影视配乐下载与在线试听，涵盖好莱坞、欧洲电影及亚洲经典配乐，包含电影音乐鉴赏、作曲家介绍及配乐资源分类。">
+    <meta name="keywords" content="电影原声,影视配乐,电影音乐下载,电影OST,电影配乐鉴赏">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --accent-color: #e50914; /* 类似流媒体红 */
+            --bg-color: #f5f5f5;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-radius: 8px;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            font-size: 1rem;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        .search-bar {
+            display: flex;
+            background: #f0f0f0;
+            border-radius: 20px;
+            padding: 5px 15px;
+            width: 300px;
+        }
+
+        .search-bar input {
+            border: none;
+            background: transparent;
+            outline: none;
+            width: 100%;
+            padding: 5px;
+        }
+
+        /* Hero 区域 */
+        .hero {
+            position: relative;
+            height: 450px;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.8)), url('https://picsum.photos/seed/cinema/1600/900') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            color: white;
+            margin-bottom: 2rem;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #c40812;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            margin-left: 1rem;
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--primary-color);
+        }
+
+        /* 分类标签 */
+        .categories {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .cat-tag {
+            padding: 8px 20px;
+            background: white;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: all 0.2s;
+        }
+
+        .cat-tag:hover, .cat-tag.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* 热门榜单 */
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-left: 1rem;
+            border-left: 5px solid var(--accent-color);
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .card-img-wrapper {
+            position: relative;
+            padding-top: 140%; /* 5:7 Aspect Ratio */
+            overflow: hidden;
+        }
+
+        .card-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .card:hover .card-img {
+            transform: scale(1.05);
+        }
+
+        .play-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .card:hover .play-overlay {
+            opacity: 1;
+        }
+
+        .play-icon {
+            font-size: 3rem;
+            color: white;
+            filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5));
+        }
+
+        .card-body {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .card-meta {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+            flex: 1;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-footer {
+            border-top: 1px solid #eee;
+            padding-top: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn-sm {
+            padding: 6px 15px;
+            font-size: 0.85rem;
+            border-radius: 15px;
+            background: #f0f0f0;
+            color: var(--text-main);
+        }
+
+        .btn-sm:hover {
+            background: #e0e0e0;
+        }
+
+        /* 鉴赏指南 / 文章区 */
+        .content-split {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .article-list article {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 1.5rem;
+            border-left: 4px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .article-list article:hover {
+            border-left-color: var(--accent-color);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .article-list h3 {
+            margin-bottom: 0.8rem;
+            font-size: 1.25rem;
+        }
+
+        .article-list p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .aside-widget {
+            background: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+        }
+
+        .aside-widget h4 {
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 0.5rem;
+        }
+
+        .composer-list li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .composer-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: var(--primary-color);
+            color: #ccc;
+            padding: 3rem 0;
+            margin-top: auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-col h5 {
+            color: white;
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+                gap: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .search-bar {
+                width: 100%;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .content-split {
+                grid-template-columns: 1fr;
+            }
+
+            .grid-layout {
+                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+                gap: 1rem;
+            }
+
+            .card-img-wrapper {
+                padding-top: 140%; /* 保持比例 */
+            }
+            
+            .card-title {
+                font-size: 1rem;
+            }
+            
+            .card-body {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>
+                Film<span>Score</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">电影原声</a></li>
+                    <li><a href="#">游戏配乐</a></li>
+                    <li><a href="#">作曲家</a></li>
+                    <li><a href="#">下载专区</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="搜索电影、配乐、作曲家...">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>沉浸在电影的音乐世界</h1>
+                <p>探索全球经典电影原声带（OST），感受配乐背后的故事与情感。高清音质试听、作曲家深度解析、独家资源下载。</p>
+                <div>
+                    <a href="#" class="btn btn-primary">立即试听</a>
+                    <a href="#" class="btn btn-outline">浏览分类</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- 分类筛选 -->
+            <div class="categories">
+                <div class="cat-tag active">全部</div>
+                <div class="cat-tag">动作冒险</div>
+                <div class="cat-tag">科幻未来</div>
+                <div class="cat-tag">爱情剧情</div>
+                <div class="cat-tag">恐怖惊悚</div>
+                <div class="cat-tag">古典交响</div>
+                <div class="cat-tag">电子合成</div>
+            </div>
+
+            <!-- 热门推荐 -->
+            <section>
+                <h2 class="section-title">本周热门原声</h2>
+                <div class="grid-layout">
+                    <!-- 卡片 1 -->
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://picsum.photos/seed/interstellar/400/560" alt="星际穿越电影原声" class="card-img">
+                            <div class="play-overlay">
+                                <span class="play-icon">▶</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">星际穿越 (Interstellar)</h3>
+                            <div class="card-meta">
+                                <span>汉斯·季默</span>
+                                <span>2014</span>
+                            </div>
+                            <p class="card-desc">配乐大师汉斯·季默为克里斯托弗·诺兰执导的科幻巨制创作的史诗级配乐，探索时间、空间与父爱的宏大乐章。</p>
+                            <div class="card-footer">
+                                <span class="btn-sm">试听</span>
+                                <span class="btn-sm">下载</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 卡片 2 -->
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://picsum.photos/seed/dune/400/560" alt="沙丘电影原声" class="card-img">
+                            <div class="play-overlay">
+                                <span class="play-icon">▶</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">沙丘 (Dune)</h3>
+                            <div class="card-meta">
+                                <span>汉斯·季默</span>
+                                <span>2021</span>
+                            </div>
+                            <p class="card-desc">融合了中亚音乐元素与电子合成器音效，营造出沙漠星球苍凉而神秘的听觉氛围。</p>
+                            <div class="card-footer">
+                                <span class="btn-sm">试听</span>
+                                <span class="btn-sm">下载</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 卡片 3 -->
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://picsum.photos/seed/lalaland/400/560" alt="爱乐之城电影原声" class="card-img">
+                            <div class="play-overlay">
+                                <span class="play-icon">▶</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">爱乐之城 (La La Land)</h3>
+                            <div class="card-meta">
+                                <span>贾斯汀·赫维茨</span>
+                                <span>2016</span>
+                            </div>
+                            <p class="card-desc">爵士乐与流行音乐的完美结合，温暖、怀旧且充满希望，斩获奥斯卡最佳原创配乐奖。</p>
+                            <div class="card-footer">
+                                <span class="btn-sm">试听</span>
+                                <span class="btn-sm">下载</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 卡片 4 -->
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://picsum.photos/seed/inception/400/560" alt="盗梦空间原声" class="card-img">
+                            <div class="play-overlay">
+                                <span class="play-icon">▶</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">盗梦空间 (Inception)</h3>
+                            <div class="card-meta">
+                                <span>汉斯·季默</span>
+                                <span>2010</span>
+                            </div>
+                            <p class="card-desc">著名的《Time》配乐，利用管风琴和电子节拍构建出梦境破碎与重组的紧张感。</p>
+                            <div class="card-footer">
+                                <span class="btn-sm">试听</span>
+                                <span class="btn-sm">下载</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 卡片 5 -->
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://picsum.photos/seed/matrix/400/560" alt="黑客帝国原声" class="card-img">
+                            <div class="play-overlay">
+                                <span class="play-icon">▶</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">黑客帝国 (The Matrix)</h3>
+                            <div class="card-meta">
+                                <span>Don Davis</span>
+                                <span>1999</span>
+                            </div>
+                            <p class="card-desc">将古典交响乐与电子工业音乐结合，营造出赛博朋克世界的机械感与哲学思辨。</p>
+                            <div class="card-footer">
+                                <span class="btn-sm">试听</span>
+                                <span class="btn-sm">下载</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 卡片 6 -->
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://picsum.photos/seed/coco/400/560" alt="寻梦环游记原声" class="card-img">
+                            <div class="play-overlay">
+                                <span class="play-icon">▶</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">寻梦环游记 (Coco)</h3>
+                            <div class="card-meta">
+                                <span>Mike Gomez</span>
+                                <span>2017</span>
+                            </div>
+                            <p class="card-desc">墨西哥传统音乐风格，充满欢快与哀愁，是对亡灵节文化的深情致敬。</p>
+                            <div class="card-footer">
+                                <span class="btn-sm">试听</span>
+                                <span class="btn-sm">下载</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- 内容分栏：文章与侧边栏 -->
+            <div class="content-split">
+                <section class="article-list">
+                    <h2 class="section-title">配乐鉴赏指南</h2>
+                    <article>
+                        <h3>电影配乐的叙事功能：如何通过音乐讲述故事？</h3>
+                        <p>音乐在电影中不仅仅是背景装饰，更是叙事的重要工具。从温伯格的《星球大战》到汉斯·季默的《星际穿越》，配乐通过旋律的起伏暗示角色的内心世界，通过和声的变化预示情节的转折。本文将探讨配乐如何与画面节奏同步，以及不同流派电影配乐的叙事策略。</p>
+                    </article>
+                    <article>
+                        <h3>从《星际穿越》看电子合成器在管弦乐中的运用</h3>
+                        <p>汉斯·季默在《星际穿越》中创造性地将传统的管弦乐团与现代电子合成器音效结合，模拟了宇宙深处的低频震动。这种融合不仅拓宽了配乐的音色边界，也为科幻电影提供了全新的听觉语言。分析其代表曲目《Cornfield Chase》的编曲结构。</p>
+                    </article>
+                    <article>
+                        <h3>经典爵士配乐赏析：从《日落大道》到《爱乐之城》</h3>
+                        <p>爵士乐因其即兴与复杂的和声特性，常被用于表现都市的孤独、浪漫与复古风情。回顾几部经典的爵士配乐电影，探讨爵士元素如何构建角色的情感基调，以及现代流行音乐如何重新诠释爵士精神。</p>
+                    </article>
+                </section>
+
+                <aside>
+                    <div class="aside-widget">
+                        <h4>知名作曲家</h4>
+                        <ul class="composer-list">
+                            <li>
+                                <img src="https://picsum.photos/seed/hans/50/50" alt="Hans Zimmer" class="composer-avatar">
+                                <div>
+                                    <div style="font-weight:bold; font-size:0.9rem;">汉斯·季默</div>
+                                    <div style="font-size:0.8rem; color:#666;">现代配乐大师</div>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="https://picsum.photos/seed/ernest/50/50" alt="Ernest Gold" class="composer-avatar">
+                                <div>
+                                    <div style="font-weight:bold; font-size:0.9rem;">欧内斯特·戈尔德</div>
+                                    <div style="font-size:0.8rem; color:#666;">《日出》作曲家</div>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="https://picsum.photos/seed/maestro/50/50" alt="John Williams" class="composer-avatar">
+                                <div>
+                                    <div style="font-weight:bold; font-size:0.9rem;">约翰·威廉姆斯</div>
+                                    <div style="font-size:0.8rem; color:#666;">好莱坞交响乐之父</div>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="https://picsum.photos/seed/quad/50/50" alt="Hildur Guðnadóttir" class="composer-avatar">
+                                <div>
+                                    <div style="font-weight:bold; font-size:0.9rem;">希杜古德多蒂尔</div>
+                                    <div style="font-size:0.8rem; color:#666;">《小丑》作曲家</div>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="#" style="display:block; margin-top:1rem; color:var(--accent-color); font-size:0.9rem; text-align:right;">查看全部 -></a>
+                    </div>
+
+                    <div class="aside-widget">
+                        <h4>资源下载须知</h4>
+                        <p style="font-size:0.9rem; color:#666; margin-bottom:0.5rem;">本站提供的资源仅供个人试听与学习交流，请支持正版CD或数字专辑。</p>
+                        <ul style="font-size:0.85rem; color:#888;">
+                            <li>• FLAC 高无损音质</li>
+                            <li>• MP3 320kbps 常用格式</li>
+                            <li>• 无需注册直接下载</li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h5>FilmScore</h5>
+                    <p style="font-size:0.9rem; line-height:1.6;">致力于为电影音乐爱好者提供最全、最优质的资源分享与鉴赏平台。</p>
+                </div>
+                <div class="footer-col">
+                    <h5>浏览分类</h5>
+                    <ul>
+                        <li><a href="#">动作电影原声</a></li>
+                        <li><a href="#">科幻电影原声</a></li>
+                        <li><a href="#">动漫影视配乐</a></li>
+                        <li><a href="#">经典老电影OST</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>关于我们</h5>
+                    <ul>
+                        <li><a href="#">网站简介</a></li>
+                        <li><a href="#">版权声明</a></li>
+                        <li><a href="#">投稿指南</a></li>
+                        <li><a href="#">联系方式</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>订阅更新</h5>
+                    <p style="font-size:0.85rem; margin-bottom:10px;">获取最新原声发布资讯</p>
+                    <div style="display:flex;">
+                        <input type="email" placeholder="您的邮箱" style="padding:8px; border:none; border-radius:4px 0 0 4px; flex:1; outline:none;">
+                        <button style="padding:8px 12px; border:none; background:var(--accent-color); color:white; border-radius:0 4px 4px 0; cursor:pointer;">订阅</button>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 FilmScore 首页演示. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+  </html>
